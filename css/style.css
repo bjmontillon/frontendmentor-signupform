@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+
+/*Primary*/
+
+--Red: hsl(0, 100%, 74%);
+--Green: hsl(154, 59%, 51%);
+
+/*Accent*/
+
+--blue: hsl(248, 32%, 49%);
+
+/*Neutral*/
+
+--Dark-Blue: hsl(249, 10%, 26%);
+--Grayish-Blue: hsl(246, 25%, 77%);
+}
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0%;
+    background-color: var(--Red);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    justify-content: space-evenly;
+    grid-gap: 10px;
+    padding: 1.5% 20% 0% 20%;
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows: 1fr 0.1fr;
+    grid-template-areas:  
+    "grid-item1 grid-item2"
+    "attribution attribution";
+}
+
+/* Grid item 1 */
+.grid-container .grid-item1 {
+    display: grid;
+    align-content: center;
+    padding: 20% 0%;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* Grid item 2 */
+
+.grid-container .grid-item2 {
+    display: grid;
+}
+
+.trial {
+    display: grid;
+}
+
+.trial .trial-content {
+    font-weight: 300;
+    font-size: 12px;
+    display: grid;
+    align-content: center;
+    background-color: var(--blue); 
+    border-radius: 10px;
+    border-style: none;
+    text-align: center;
+    height: 8vh;
+    color: white;
+    width: 99%;
+    box-shadow: 0px 5px #888888;
+}
+
+.input-form {
+    background-color: white;
+    border-radius: 10px; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns:  1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr 0.5fr;
+    justify-content: center;
+    grid-template-rows:  
+    "fname"
+    "lname"
+    "email"
+    "password"
+    "submit"
+    "note";
+    box-shadow: 0px 5px #888888;
+}
+
+input {
+    width: 300px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    border-width: .1em;
+}
+
+.fname {
+    display: grid;
+    justify-content: center;
+}
+
+.lname {
+    display: grid;
+    justify-content: center;
+    
+}
+
+.email {
+    display: grid;
+    justify-content: center;
+}
+
+.password {
+    display: grid;
+    justify-content: center;
+}
+.submit {
+    display: grid;
+    justify-content: center;
+    width: auto;
+    
+}
+
+button {
+    background-color: var(--Green);
+    border-radius: 10px;
+    border-width: .1;
+    color : white;
+    text-align: center;
+}
+
+
+.note{
+    display: grid;
+    
+    font-size: 11px;
+    text-align: center;
+}
+
+small {
+    visibility: visible;
+}
+
+#attribution {
+    display: grid;
+}
+
+footer {
+    display: grid;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: white;
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width: 550px) {
+
+
+    .grid-container {
+        grid-template-columns:  1fr;
+        grid-template-rows: 1fr 1fr .3fr;
+        height: 110vh;
+        grid-template-areas:
+        "grid-item1"
+        "grid-item2"
+        "footer";
+        grid-gap:0;
+        padding:  5% 10% 5% 10%;
+}
+    
+    .grid-container .grid-item1 {
+        text-align: center;
+        padding: 0%;
+}
+
+
+
+.grid-container .grid-item2 {
+    display: grid;
+    align-content: center;
+    grid-template-columns:  1fr;
+    
+    grid-template-areas: 
+    ".trial"
+    "input-form";
+    
+}
+
+.trial{
+    margin: 0;
+}
+
+.grid-item2 .trial1 {
+    display:grid;
+   
+    
+}
+.grid-item2 .trial1 .trial2 {
+    display: grid;
+    align-content: center;
+}
+
+.note {
+    text-align: center;
+    margin: 0% 5%;
+}
+
+
+
+}
+
+
+
